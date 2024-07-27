@@ -8,8 +8,9 @@ export const signup = async (req = request, res = response) => {
 
     try {
         // Hash the password
-        const salt_rounds = process.env.SALT_ROUNDS || 10;
-        const hashedPassword = await bcrypt.hash(password, salt_rounds);
+        const saltRounds = parseInt(process.env.SALT_ROUNDS) || 10;
+        const salt = await bcrypt.genSalt(saltRounds);
+        const hashedPassword = await bcrypt.hash(password, salt);
 
         // Create user with hashed password
         const user = await User.create({ name, email, password: hashedPassword });

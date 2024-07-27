@@ -1,15 +1,15 @@
 import express from 'express';
-import { createJob, getJobs, getJob, updateJob, deleteJob } from '../controllers/job-controller.js';
+import { createApplication, deleteApplication, getApplicationById, getApplications, updateApplicationStatus } from '../controllers/application-controller.js';
 
 const applicationRouter = express.Router();
 
 applicationRouter.route('/')
-      .get(getJobs)
-      .post(createJob)
-      
-applicationRouter.route('/:jobId')
-      .put(updateJob)
-      .get(getJob)
-      .delete(deleteJob)
+    .get(getApplications)
+    .post(createApplication);
+
+applicationRouter.route('/:applicationId')
+    .get(getApplicationById)
+    .put(updateApplicationStatus)
+    .delete(deleteApplication);
 
 export default applicationRouter;

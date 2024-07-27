@@ -1,10 +1,10 @@
 import express from 'express';
-import { uploadResume } from '../controllers/resume-controller.js';
+import {createJob} from '../controllers/job-contorller.js';
 
 
 const jobRouter = express.Router();
 
 jobRouter.route('/upload')
-        .post(uploadResume);
+        .post(createJob);
 
 export default jobRouter;
