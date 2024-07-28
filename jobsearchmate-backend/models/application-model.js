@@ -1,6 +1,10 @@
 import mongoose from "mongoose";
 
 const applicationSchema = new mongoose.Schema({
+    applicationId: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: "Application",
+    },
     job: {
         type: mongoose.Schema.Types.ObjectId,
         ref: "Job",

@@ -1,18 +1,17 @@
 import mongoose from "mongoose";
 
 const resumeSchema = new mongoose.Schema({
+    resumeId: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: "Resume",
+    },
     name: {
         type: String,
         required: true,
     },
-    resume: {
-        type: Buffer,
-        required: true,
-    },
-    contentType: {
+    resumeURL: {
         type: String,
         required: true,
-        enum: ['application/pdf'],
     },
     date: {
         type: Date,
