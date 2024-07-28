@@ -74,9 +74,9 @@ Based on the provided resume and job description, here are some suggestions for 
 `)
   const [isResumePdf, setIsResumePdf] = useState(false)
   const [resumeFile, setResumeFile] = useState(null)
-  const [resumeExpanded, setResumeExpanded] = useState(true)
-  const [jobDescriptionExpanded, setJobDescriptionExpanded] = useState(true)
-  const [aiNotesExpanded, setAiNotesExpanded] = useState(true)
+  // const [resumeExpanded, setResumeExpanded] = useState(true)
+  // const [jobDescriptionExpanded, setJobDescriptionExpanded] = useState(true)
+  // const [aiNotesExpanded, setAiNotesExpanded] = useState(true)
   const handleResumeUpload = (event) => {
     const file = event.target.files[0]
     if (file && file.type === "application/pdf") {
