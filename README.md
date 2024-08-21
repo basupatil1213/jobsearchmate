@@ -46,11 +46,13 @@ Make sure you have the following installed:
 4. Set up environment variables:
 
 Create a .env.local file in the root of the project and add the following variables:
+
     ```bash
         MONGODB_URI=your_mongodb_connection_string
         OPENAI_API_KEY=your_openai_api_key
         CLERK_FRONTEND_API=your_clerk_frontend_api
         CLERK_API_KEY=your_clerk_api_key
+
 5. Run the development server:
     ```bash
         npm run dev
